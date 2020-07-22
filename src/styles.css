@@ -10,12 +10,20 @@ body {
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%); */
   background-color: #b8c6db;
   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  /* background-color: #7f53ac;
+  background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%); */
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .App {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 1000px;
+  height: 611.5px;
+  /* margin: 0 auto; */
 }
 
 .rounds {
