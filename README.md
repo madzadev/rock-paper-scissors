@@ -1,6 +1,6 @@
-# React Calculator
+# Rock Paper Scissors
 
-A calculator project built with React.
+Classic Ŗock, Paper, Scissors game with nice UI.
 
 ![Alt img](https://i.imgur.com/vhtRGoQ.png)
 
