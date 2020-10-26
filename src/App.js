@@ -5,10 +5,6 @@ import rock from "./assets/rock.png";
 import paper from "./assets/paper.png";
 import scissors from "./assets/scissors.png";
 
-// import happy from "./assets/happy.png";
-// import sad from "./assets/sad.png";
-// import tie from "./assets/tie.png";
-
 import trophy from "./assets/trophy.png";
 
 const Button = (props) => {
@@ -125,16 +121,6 @@ export default function App() {
             <h1>VS</h1>
           ) : (
             <>
-              {/* <img
-                src={
-                  game.message === "You won!"
-                    ? happy
-                    : game.message === "You lost!"
-                    ? sad
-                    : tie
-                }
-                alt="img"
-              /> */}
               <h3 className="message">{game.message}</h3>
             </>
           )}
@@ -174,17 +160,7 @@ export default function App() {
         <div />
         <h1>{game.pcScore}</h1>
       </div>
-      {game.userSelection === "" ? (
-        <div>
-          <h3>RULES OF THE GAME:</h3>
-          {/* <p>
-            Each player takes turns on choosing whether rock, paper or scissors
-            in each round.
-          </p> */}
-          <p>Rock beats scissors, paper covers rock and scissors cuts paper.</p>
-          <p>First player to reach 10 wins is victorious!</p>
-        </div>
-      ) : (
+      {game.userSelection !== "" &&
         <div onClick={reset} className="reset-btn">
           <h3>
             {game.userScore === 10 || game.pcScore === 10
@@ -192,7 +168,7 @@ export default function App() {
               : "Reset"}
           </h3>
         </div>
-      )}
+      }
     </div>
   );
 }
