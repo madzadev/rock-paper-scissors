@@ -82,14 +82,9 @@ img {
   display: grid;
   place-items: center;
 }
-/* 
-.rules-title {
-  font-weight: bold;
-} */
 
 .rules {
   color: white;
-  /* font-weight: bold; */
 }
 
 .reset-btn {
