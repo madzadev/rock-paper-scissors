@@ -4,9 +4,17 @@ Classic Ŗock, Paper, Scissors game with nice UI.
 
 ![Alt img](https://i.imgur.com/vhtRGoQ.png)
 
+## Features
+
+1. User selects manually
+2. PC selects randomly
+3. Comparison of choices and winner detection
+4. First to 10 wins
+5. Reset functionality
+
 ## Installation
 
-1. `git clone https://github.com/madzadev/react-rock-paper-scissors.git`
+1. `git clone https://github.com/madzadev/rock-paper-scissors.git`
 
 2. `cd react-rock-paper-scissors`
 
