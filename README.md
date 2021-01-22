@@ -16,7 +16,7 @@ Classic Ŗock, Paper, Scissors game with nice UI.
 
 1. `git clone https://github.com/madzadev/rock-paper-scissors.git`
 
-2. `cd react-rock-paper-scissors`
+2. `cd rock-paper-scissors`
 
 3. `npm install`
 
