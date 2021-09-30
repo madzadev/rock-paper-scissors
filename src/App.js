@@ -5,15 +5,9 @@ import rock from "./assets/rock.png";
 import paper from "./assets/paper.png";
 import scissors from "./assets/scissors.png";
 
-import trophy from "./assets/trophy.png";
+import { Button } from "../components/Button";
 
-const Button = (props) => {
-  return (
-    <div value={props.name} onClick={props.onClick}>
-      <img className="user-selection-img" src={props.img} alt="img" />
-    </div>
-  );
-};
+import trophy from "./assets/trophy.png";
 
 export default function App() {
   const [game, setGame] = useState({
@@ -160,7 +154,7 @@ export default function App() {
         <div />
         <h1>{game.pcScore}</h1>
       </div>
-      {game.userSelection !== "" &&
+      {game.userSelection !== "" && (
         <div onClick={reset} className="reset-btn">
           <h3>
             {game.userScore === 10 || game.pcScore === 10
@@ -168,7 +162,7 @@ export default function App() {
               : "Reset"}
           </h3>
         </div>
-      }
+      )}
     </div>
   );
 }
