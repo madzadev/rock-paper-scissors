@@ -7,7 +7,7 @@ export const Computer = ({
   rockIcon,
   paperIcon,
   scissorsIcon,
-  img,
+  trophyIcon,
 }) => {
   return (
     <div className="user">
@@ -33,7 +33,7 @@ export const Computer = ({
         )
       ) : (
         <>
-          <img className="pc-selection-img" src={img} alt="img" />
+          <img className="pc-selection-img" src={trophyIcon} alt="img" />
           <h3>Victory!</h3>
         </>
       )}

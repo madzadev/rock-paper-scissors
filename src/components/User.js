@@ -1,6 +1,12 @@
 import "./User.css";
 
-export const User = ({ name, userScore, userSelection, img, children }) => {
+export const User = ({
+  name,
+  userScore,
+  userSelection,
+  trophyIcon,
+  children,
+}) => {
   return (
     <div className="user">
       <h1>{name}</h1>
@@ -15,7 +21,7 @@ export const User = ({ name, userScore, userSelection, img, children }) => {
         </>
       ) : (
         <>
-          <img className="victory" src={img} alt="img" />
+          <img className="victory" src={trophyIcon} alt="img" />
           <h3>Victory!</h3>
         </>
       )}

@@ -84,7 +84,7 @@ export default function App() {
       <Round {...game} />
       <PlayBox>
         <Box>
-          <User {...game} img={trophy}>
+          <User {...game} trophyIcon={trophy}>
             <Choice {...game} value="Rock" onClick={play} choiceIcon={rock} />
             <Choice {...game} value="Paper" onClick={play} choiceIcon={paper} />
             <Choice
@@ -103,7 +103,7 @@ export default function App() {
             rockIcon={rock}
             paperIcon={paper}
             scissorsIcon={scissors}
-            img={trophy}
+            trophyIcon={trophy}
           />
           <Score score={game.pcScore} />
         </Box>
