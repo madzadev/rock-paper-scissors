@@ -1,7 +1,7 @@
 .reset-btn {
   background-color: white;
   width: 200px;
-  margin: 0 auto;
+  margin: 30px auto;
   height: 40px;
   border-radius: 20px;
   transition: transform 0.1s;

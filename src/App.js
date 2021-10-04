@@ -85,17 +85,26 @@ export default function App() {
       <PlayBox>
         <Box>
           <User {...game} img={trophy}>
-            <Choice {...game} value="Rock" onClick={play} img={rock} />
-            <Choice {...game} value="Paper" onClick={play} img={paper} />
-            <Choice {...game} value="Scissors" onClick={play} img={scissors} />
+            <Choice {...game} value="Rock" onClick={play} choiceIcon={rock} />
+            <Choice {...game} value="Paper" onClick={play} choiceIcon={paper} />
+            <Choice
+              {...game}
+              value="Scissors"
+              onClick={play}
+              choiceIcon={scissors}
+            />
           </User>
           <Score score={game.userScore} />
         </Box>
         <Message {...game} />
         <Box>
-          <Computer {...game} img={trophy}>
-            <Choice {...game} img={`${game.pcSelection.toLowerCase()}`} />
-          </Computer>
+          <Computer
+            {...game}
+            rockIcon={rock}
+            paperIcon={paper}
+            scissorsIcon={scissors}
+            img={trophy}
+          />
           <Score score={game.pcScore} />
         </Box>
       </PlayBox>

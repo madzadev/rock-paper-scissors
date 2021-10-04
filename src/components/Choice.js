@@ -1,9 +1,9 @@
 import "./Choice.css";
 
-export const Choice = ({ value, img, onClick }) => {
+export const Choice = ({ value, choiceIcon, onClick }) => {
   return (
     <div value={value} onClick={onClick}>
-      <img className="user-selection-img" src={img} alt="img" />
+      <img className="user-selection-img" src={choiceIcon} alt="img" />
     </div>
   );
 };

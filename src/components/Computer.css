@@ -1,5 +1,10 @@
+.waiting {
+  margin-top: 10px;
+}
+
 .pc-selection-img {
   width: 80px;
+  margin: 10px 0;
 }
 
 .user {

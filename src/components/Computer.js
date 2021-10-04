@@ -4,7 +4,9 @@ export const Computer = ({
   pcScore,
   userSelection,
   pcSelection,
-  children,
+  rockIcon,
+  paperIcon,
+  scissorsIcon,
   img,
 }) => {
   return (
@@ -12,18 +14,26 @@ export const Computer = ({
       <h1>Computer</h1>
       {pcScore < 10 ? (
         userSelection === "" ? (
-          <h3>Waiting for your selection!</h3>
+          <h3 className="waiting">Waiting for your selection!</h3>
         ) : (
           <>
-            <div className="pc-selection-img" />
-            {children}
-            <div />
+            <img
+              className="pc-selection-img"
+              src={
+                pcSelection === "Rock"
+                  ? rockIcon
+                  : pcSelection === "Paper"
+                  ? paperIcon
+                  : scissorsIcon
+              }
+              alt="img"
+            />
             <h3>PC selected: {pcSelection}</h3>
           </>
         )
       ) : (
         <>
-          <img src={img} alt="img" />
+          <img className="pc-selection-img" src={img} alt="img" />
           <h3>Victory!</h3>
         </>
       )}

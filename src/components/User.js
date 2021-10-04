@@ -15,7 +15,7 @@ export const User = ({ name, userScore, userSelection, img, children }) => {
         </>
       ) : (
         <>
-          <img src={img} alt="img" />
+          <img className="victory" src={img} alt="img" />
           <h3>Victory!</h3>
         </>
       )}

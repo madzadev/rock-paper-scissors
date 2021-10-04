@@ -7,7 +7,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -21,10 +21,7 @@ body {
   max-width: 1000px;
   min-height: 611.5px;
   padding: 20px;
-  /* border: 1px solid red; */
   margin: 0 auto;
-  /* position: relative;
-  top: 50%; */
   vertical-align: middle;
 }
 
@@ -39,13 +36,6 @@ body {
   grid-template-columns: 2fr 1fr 2fr;
   margin-top: 50px;
 }
-
-/* .box {
-  border: 1px solid white;
-  background-color: white;
-  margin: 0 10px;
-  border-radius: 20px;
-} */
 
 .button {
   margin: 20px;
