@@ -43,7 +43,7 @@ export default function App() {
       userSelection === pcSelection
         ? setGame({
             ...game,
-            message: (game.message = "It's a tie!"),
+            message: (game.message = settings.tieMessage),
           })
         : (userSelection === "Rock" && pcSelection === "Scissors") ||
           (userSelection === "Paper" && pcSelection === "Rock") ||
@@ -51,19 +51,19 @@ export default function App() {
         ? setGame({
             ...game,
             userScore: (game.userScore += 1),
-            message: (game.message = "You won!"),
+            message: (game.message = settings.winMessage),
           })
         : setGame({
             ...game,
             pcScore: (game.pcScore += 1),
-            message: (game.message = "You lost!"),
+            message: (game.message = settings.lostMessage),
           });
 
       setGame({
         ...game,
         round: (game.round += 1),
-        userSelection: userSelection,
-        pcSelection: pcSelection,
+        userSelection,
+        pcSelection,
       });
     }
   };

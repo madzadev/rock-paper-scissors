@@ -1,9 +1,9 @@
 export const settings = {
-  userName: "Player1",
+  userName: "Player 1",
   pcName: "Computer",
   winMessage: "You won!",
-  tieMessage: "It's a tie",
-  looseMessage: "You lose!",
+  tieMessage: "It's a tie!",
+  lostMessage: "You lost!",
   winTarget: 10,
 };
 
