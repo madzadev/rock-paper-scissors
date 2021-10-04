@@ -1,0 +1,8 @@
+.message {
+  font-size: 26px;
+}
+
+.message-box {
+  display: grid;
+  place-items: center;
+}

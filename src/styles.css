@@ -1,29 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
-body {
-  background-color: #2a2a72;
-  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
 .App {
-  width: 1000px;
-  height: 611.5px;
+  max-width: 1000px;
+  min-height: 611.5px;
+  padding: 20px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  /* position: relative;
+  top: 50%; */
+  vertical-align: middle;
 }
 
-.rounds {
+/* .round {
   color: white;
-}
+} */
 
 .score-box {
   display: grid;
@@ -37,33 +45,12 @@ body {
   margin-top: 50px;
 }
 
-.box {
+/* .box {
   border: 1px solid white;
   background-color: white;
   margin: 0 10px;
   border-radius: 20px;
-}
-
-.user-selection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-}
-
-img {
-  width: 80px;
-  transition: transform 0.1s;
-}
-
-.user-selection-img {
-  border-radius: 50%;
-}
-
-.user-selection-img:hover {
-  cursor: pointer;
-  background-color: rgb(224, 224, 224);
-  transform: scale(1.1);
-}
+} */
 
 .button {
   margin: 20px;
@@ -74,32 +61,15 @@ img {
   width: 80px;
 }
 
-.message {
+/* .message {
   font-size: 26px;
 }
 
 .message-box {
   display: grid;
   place-items: center;
-}
+} */
 
-.rules {
+/* .rules {
   color: white;
-}
-
-.reset-btn {
-  background-color: white;
-  width: 200px;
-  margin: 0 auto;
-  height: 40px;
-  border-radius: 20px;
-  transition: transform 0.1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.reset-btn:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
+} */
