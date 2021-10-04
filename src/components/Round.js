@@ -1,6 +1,9 @@
-// import React from "react";
 import "./Round.css";
 
-export const Round = ({ message }) => {
-  return <h1 className="round">{message}</h1>;
+export const Round = ({ userSelection, round }) => {
+  return (
+    <h1 className="round">
+      {userSelection === "" ? "No rounds yet!" : `Round: ${round}`}
+    </h1>
+  );
 };

@@ -1,9 +1,3 @@
-.user-selection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-}
-
 img {
   width: 80px;
   transition: transform 0.1s;

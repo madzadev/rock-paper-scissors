@@ -1,14 +1,12 @@
+.pc-selection-img {
+  width: 80px;
+}
+
 .user {
   background-color: white;
   border-radius: 20px;
   text-align: center;
   padding: 30px 0;
   margin-bottom: 20px;
-}
-
-.user-selection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  margin: 10px 0;
+  min-height: 180px;
 }

@@ -1,11 +1,11 @@
 import "./ResetButton.css";
 
-export const ResetButton = ({ onClick, game }) => {
+export const ResetButton = ({ onClick, userSelection, userScore, pcScore }) => {
   return (
-    <div onClick={onClick} className="reset-btn">
-      <h3>
-        {game.userScore === 10 || game.pcScore === 10 ? "Play again" : "Reset"}
-      </h3>
-    </div>
+    userSelection !== "" && (
+      <div onClick={onClick} className="reset-btn">
+        <h3>{userScore === 10 || pcScore === 10 ? "Play again" : "Reset"}</h3>
+      </div>
+    )
   );
 };

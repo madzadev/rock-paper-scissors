@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 
 body {
@@ -29,10 +28,6 @@ body {
   vertical-align: middle;
 }
 
-/* .round {
-  color: white;
-} */
-
 .score-box {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
@@ -56,20 +51,3 @@ body {
   margin: 20px;
   width: 80px;
 }
-
-.pc-selection-img {
-  width: 80px;
-}
-
-/* .message {
-  font-size: 26px;
-}
-
-.message-box {
-  display: grid;
-  place-items: center;
-} */
-
-/* .rules {
-  color: white;
-} */
