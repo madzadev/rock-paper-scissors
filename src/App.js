@@ -16,35 +16,25 @@ import paper from "./assets/paper.png";
 import scissors from "./assets/scissors.png";
 import trophy from "./assets/trophy.png";
 
+import { settings } from "./configs/game";
+import { states } from "./configs/game";
+
 import "./styles.css";
 
 export default function App() {
   const [game, setGame] = useState({
-    name: "Player 1",
-    userSelection: "",
-    pcSelection: "",
-    round: 0,
-    userScore: 0,
-    pcScore: 0,
-    message: "",
+    ...states,
   });
 
   const reset = () => {
     setGame({
       ...game,
-      userSelection: "",
-      pcSelection: "",
-      round: 0,
-      userScore: 0,
-      pcScore: 0,
-      message: "",
+      ...states,
     });
   };
 
   const play = (e) => {
-    e.preventDefault();
-
-    if (game.pcScore < 10) {
+    if (game.pcScore < settings.winTarget) {
       const userSelection = e.target.parentNode.getAttribute("value");
       const pcSelection = ["Rock", "Paper", "Scissors"][
         Math.floor(Math.random() * 3)
