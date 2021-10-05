@@ -19,3 +19,8 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
+img {
+  width: 80px;
+  margin: 10px 0;
+}

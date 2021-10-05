@@ -3,7 +3,7 @@ import "./User.css";
 
 export const User = ({ userScore, userSelection, trophyIcon, children }) => {
   return (
-    <div className="user">
+    <div className="user-card">
       <h1>{settings.userName}</h1>
       {userScore < settings.winTarget ? (
         <>
@@ -16,7 +16,7 @@ export const User = ({ userScore, userSelection, trophyIcon, children }) => {
         </>
       ) : (
         <>
-          <img className="victory" src={trophyIcon} alt="trophy" />
+          <img src={trophyIcon} alt="trophy" />
           <h3>Victory!</h3>
         </>
       )}

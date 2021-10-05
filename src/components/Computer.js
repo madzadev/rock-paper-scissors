@@ -19,7 +19,6 @@ export const Computer = ({
         ) : (
           <>
             <img
-              className="computer-selection-icon"
               src={
                 pcSelection === "Rock"
                   ? rockIcon
@@ -34,7 +33,7 @@ export const Computer = ({
         )
       ) : (
         <>
-          <img className="pc-selection-img" src={trophyIcon} alt="trophy" />
+          <img src={trophyIcon} alt="trophy" />
           <h3>Victory!</h3>
         </>
       )}

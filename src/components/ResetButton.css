@@ -3,11 +3,10 @@
   width: 200px;
   margin: 30px auto;
   height: 40px;
+  display: grid;
+  place-items: center;
   border-radius: 20px;
   transition: transform 0.1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .reset-btn:hover {
