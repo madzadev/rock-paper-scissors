@@ -3,18 +3,22 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   width: 100vw;
   min-height: 100vh;
+  display: grid;
+  place-items: center;
   background-color: #2a2a72;
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   font-family: "Montserrat", sans-serif;
 }
 
 .App {
-  max-width: 1000px;
+  width: 1000px;
+  min-height: 600px;
   padding: 20px;
   margin: 0 auto;
   text-align: center;
@@ -23,4 +27,20 @@ body {
 img {
   width: 80px;
   margin: 10px 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .App {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    display: block;
+  }
+
+  .App {
+    width: 100%;
+  }
 }
