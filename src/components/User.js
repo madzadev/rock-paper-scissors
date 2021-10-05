@@ -1,11 +1,11 @@
-import { settings } from "./../configs/game";
+import { settings } from "../configs/game";
 import "./User.css";
 
 export const User = ({ userScore, userSelection, trophyIcon, children }) => {
   return (
     <div className="user">
       <h1>{settings.userName}</h1>
-      {userScore < 10 ? (
+      {userScore < settings.winTarget ? (
         <>
           <div className="user-selection">{children}</div>
           <h3>

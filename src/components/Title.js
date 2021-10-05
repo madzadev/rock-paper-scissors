@@ -1,5 +1,5 @@
 import "./Title.css";
 
-export const Title = ({ name }) => {
-  return <h1 className="title">{name}</h1>;
+export const Title = ({ gameName }) => {
+  return <h1 className="title">{gameName}</h1>;
 };

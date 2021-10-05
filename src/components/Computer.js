@@ -1,3 +1,4 @@
+import { settings } from "../configs/game";
 import "./Computer.css";
 
 export const Computer = ({
@@ -12,9 +13,9 @@ export const Computer = ({
   return (
     <div className="user">
       <h1>Computer</h1>
-      {pcScore < 10 ? (
+      {pcScore < settings.winTarget ? (
         userSelection === "" ? (
-          <h3 className="waiting">Waiting for your selection!</h3>
+          <h3 className="waiting">{settings.waitingMessage}</h3>
         ) : (
           <>
             <img
@@ -26,7 +27,7 @@ export const Computer = ({
                   ? paperIcon
                   : scissorsIcon
               }
-              alt="img"
+              alt="pc-selection"
             />
             <h3>PC selected: {pcSelection}</h3>
           </>

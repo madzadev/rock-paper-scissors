@@ -11,15 +11,17 @@ import { Score } from "./components/Score";
 import { Message } from "./components/Message";
 import { ResetButton } from "./components/ResetButton";
 
+import { settings } from "./configs/game";
+import { states } from "./configs/game";
+
 import rock from "./assets/rock.png";
 import paper from "./assets/paper.png";
 import scissors from "./assets/scissors.png";
 import trophy from "./assets/trophy.png";
 
-import { settings } from "./configs/game";
-import { states } from "./configs/game";
-
 import "./styles.css";
+
+const { winMessage, tieMessage, lostMessage, winTarget } = settings;
 
 export default function App() {
   const [game, setGame] = useState({
@@ -34,7 +36,7 @@ export default function App() {
   };
 
   const play = (e) => {
-    if (game.pcScore < settings.winTarget) {
+    if (game.pcScore < winTarget) {
       const userSelection = e.target.parentNode.getAttribute("value");
       const pcSelection = ["Rock", "Paper", "Scissors"][
         Math.floor(Math.random() * 3)
@@ -42,21 +44,18 @@ export default function App() {
 
       userSelection === pcSelection
         ? setGame({
-            ...game,
-            message: (game.message = settings.tieMessage),
+            ...(game.message = tieMessage),
           })
         : (userSelection === "Rock" && pcSelection === "Scissors") ||
           (userSelection === "Paper" && pcSelection === "Rock") ||
           (userSelection === "Scissors" && pcSelection === "Paper")
         ? setGame({
-            ...game,
-            userScore: (game.userScore += 1),
-            message: (game.message = settings.winMessage),
+            ...(game.userScore += 1),
+            ...(game.message = winMessage),
           })
         : setGame({
-            ...game,
-            pcScore: (game.pcScore += 1),
-            message: (game.message = settings.lostMessage),
+            ...(game.pcScore += 1),
+            ...(game.message = lostMessage),
           });
 
       setGame({
@@ -70,7 +69,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Title name="Rock, paper, scissors!" />
+      <Title {...settings} />
       <Round {...game} />
       <PlayBox>
         <Box>
