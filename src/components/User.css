@@ -6,7 +6,7 @@
   margin-bottom: 20px;
 }
 
-.user-selection {
+.choice-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;

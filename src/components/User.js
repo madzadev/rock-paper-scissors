@@ -7,7 +7,7 @@ export const User = ({ userScore, userSelection, trophyIcon, children }) => {
       <h1>{settings.userName}</h1>
       {userScore < settings.winTarget ? (
         <>
-          <div className="user-selection">{children}</div>
+          <div className="choice-grid">{children}</div>
           <h3>
             {userSelection === ""
               ? "Pick one!"
