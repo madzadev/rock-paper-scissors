@@ -1,5 +1,5 @@
 import "./PlayBox.css";
 
 export const PlayBox = ({ children }) => {
-  return <div className="wrapper">{children}</div>;
+  return <div className="play-box">{children}</div>;
 };

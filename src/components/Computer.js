@@ -11,15 +11,15 @@ export const Computer = ({
   trophyIcon,
 }) => {
   return (
-    <div className="user">
+    <div className="computer-card">
       <h1>Computer</h1>
       {pcScore < settings.winTarget ? (
         userSelection === "" ? (
-          <h3 className="waiting">{settings.waitingMessage}</h3>
+          <h3 className="waiting-message">{settings.waitingMessage}</h3>
         ) : (
           <>
             <img
-              className="pc-selection-img"
+              className="computer-selection-icon"
               src={
                 pcSelection === "Rock"
                   ? rockIcon
@@ -27,14 +27,14 @@ export const Computer = ({
                   ? paperIcon
                   : scissorsIcon
               }
-              alt="pc-selection"
+              alt="icon"
             />
             <h3>PC selected: {pcSelection}</h3>
           </>
         )
       ) : (
         <>
-          <img className="pc-selection-img" src={trophyIcon} alt="img" />
+          <img className="pc-selection-img" src={trophyIcon} alt="trophy" />
           <h3>Victory!</h3>
         </>
       )}

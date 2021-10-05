@@ -8,12 +8,3 @@ export const settings = {
   waitingMessage: "Waiting for your selection!",
   winTarget: 10,
 };
-
-export const states = {
-  userSelection: "",
-  pcSelection: "",
-  round: 0,
-  userScore: 0,
-  pcScore: 0,
-  message: "",
-};

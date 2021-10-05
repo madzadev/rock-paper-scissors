@@ -12,7 +12,6 @@ import { Message } from "./components/Message";
 import { ResetButton } from "./components/ResetButton";
 
 import { settings } from "./configs/game";
-import { states } from "./configs/game";
 
 import rock from "./assets/rock.png";
 import paper from "./assets/paper.png";
@@ -21,22 +20,33 @@ import trophy from "./assets/trophy.png";
 
 import "./styles.css";
 
-const { winMessage, tieMessage, lostMessage, winTarget } = settings;
-
 export default function App() {
-  const [game, setGame] = useState({
-    ...states,
+  let [game, setGame] = useState({
+    userSelection: "",
+    pcSelection: "",
+    round: 0,
+    userScore: 0,
+    pcScore: 0,
+    message: "",
   });
 
   const reset = () => {
     setGame({
       ...game,
-      ...states,
+      userSelection: "",
+      pcSelection: "",
+      round: 0,
+      userScore: 0,
+      pcScore: 0,
+      message: "",
     });
   };
 
+  const { winMessage, tieMessage, lostMessage, winTarget } = settings;
+  const { userScore, pcScore } = game;
+
   const play = (e) => {
-    if (game.pcScore < winTarget) {
+    if (pcScore < winTarget) {
       const userSelection = e.target.parentNode.getAttribute("value");
       const pcSelection = ["Rock", "Paper", "Scissors"][
         Math.floor(Math.random() * 3)
@@ -44,12 +54,14 @@ export default function App() {
 
       userSelection === pcSelection
         ? setGame({
-            ...(game.message = tieMessage),
+            ...game,
+            message: tieMessage,
           })
         : (userSelection === "Rock" && pcSelection === "Scissors") ||
           (userSelection === "Paper" && pcSelection === "Rock") ||
           (userSelection === "Scissors" && pcSelection === "Paper")
         ? setGame({
+            ...game,
             ...(game.userScore += 1),
             ...(game.message = winMessage),
           })
@@ -69,7 +81,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Title {...settings} />
+      <Title />
       <Round {...game} />
       <PlayBox>
         <Box>
@@ -83,7 +95,7 @@ export default function App() {
               choiceIcon={scissors}
             />
           </User>
-          <Score score={game.userScore} />
+          <Score score={userScore} />
         </Box>
         <Message {...game} />
         <Box>
@@ -94,7 +106,7 @@ export default function App() {
             scissorsIcon={scissors}
             trophyIcon={trophy}
           />
-          <Score score={game.pcScore} />
+          <Score score={pcScore} />
         </Box>
       </PlayBox>
       <ResetButton {...game} onClick={reset} />

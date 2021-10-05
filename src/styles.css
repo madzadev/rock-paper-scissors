@@ -8,36 +8,14 @@
 body {
   width: 100vw;
   min-height: 100vh;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   background-color: #2a2a72;
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   font-family: "Montserrat", sans-serif;
-  text-align: center;
 }
 
 .App {
   max-width: 1000px;
-  min-height: 611.5px;
   padding: 20px;
   margin: 0 auto;
-  vertical-align: middle;
-}
-
-.score-box {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  color: white;
-}
-
-.play-box {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  margin-top: 50px;
-}
-
-.button {
-  margin: 20px;
-  width: 80px;
+  text-align: center;
 }

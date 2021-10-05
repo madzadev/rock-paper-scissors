@@ -1,13 +1,10 @@
-img {
+.user-selection-icon {
   width: 80px;
+  border-radius: 50%;
   transition: transform 0.1s;
 }
 
-.user-selection-img {
-  border-radius: 50%;
-}
-
-.user-selection-img:hover {
+.user-selection-icon:hover {
   cursor: pointer;
   background-color: rgb(224, 224, 224);
   transform: scale(1.1);

@@ -1,17 +1,17 @@
-.waiting {
-  margin-top: 10px;
-}
-
-.pc-selection-img {
-  width: 80px;
-  margin: 10px 0;
-}
-
-.user {
+.computer-card {
   background-color: white;
-  border-radius: 20px;
   text-align: center;
   padding: 30px 0;
   margin-bottom: 20px;
   min-height: 170px;
+  border-radius: 20px;
+}
+
+.waiting-message {
+  margin-top: 10px;
+}
+
+.computer-selection-icon {
+  width: 80px;
+  margin: 10px 0;
 }
