@@ -1,5 +1,4 @@
 import { settings } from "../configs/game";
-
 import "./ResetButton.css";
 
 export const ResetButton = ({ onClick, userSelection, userScore, pcScore }) => {
