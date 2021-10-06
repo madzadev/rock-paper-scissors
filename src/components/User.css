@@ -1,9 +1,9 @@
 .user-card {
+  height: 220px;
+  padding: 27px 0;
   background-color: white;
-  border-radius: 20px;
-  text-align: center;
-  padding: 30px 0;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 .choice-grid {
