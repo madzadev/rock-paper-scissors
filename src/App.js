@@ -43,9 +43,10 @@ export default function App() {
   };
 
   const { winMessage, tieMessage, lostMessage, winTarget } = settings;
+  const { pcScore, userScore } = game;
 
   const play = (e) => {
-    if (game.pcScore < winTarget) {
+    if (pcScore < winTarget) {
       const userSelection = e.target.parentNode.getAttribute("value");
       const pcSelection = ["Rock", "Paper", "Scissors"][
         Math.floor(Math.random() * 3)
@@ -92,7 +93,7 @@ export default function App() {
               choiceIcon={scissors}
             />
           </User>
-          <Score score={game.userScore} />
+          <Score score={userScore} />
         </ProfileBox>
         <Message {...game} />
         <ProfileBox>
@@ -103,7 +104,7 @@ export default function App() {
             scissorsIcon={scissors}
             trophyIcon={trophy}
           />
-          <Score score={game.pcScore} />
+          <Score score={pcScore} />
         </ProfileBox>
       </PlayArea>
       <ResetButton {...game} onClick={reset} />
