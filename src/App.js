@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { Title } from "./components/Title";
 import { Round } from "./components/Round";
-import { PlayBox } from "./components/PlayBox";
-import { Box } from "./components/Box";
+import { PlayArea } from "./components/PlayArea";
+import { ProfileBox } from "./components/ProfileBox";
 import { User } from "./components/User";
 import { Choice } from "./components/Choice";
 import { Computer } from "./components/Computer";
@@ -80,8 +80,8 @@ export default function App() {
     <div className="App">
       <Title />
       <Round {...game} />
-      <PlayBox>
-        <Box>
+      <PlayArea>
+        <ProfileBox>
           <User {...game} trophyIcon={trophy}>
             <Choice {...game} value="Rock" onClick={play} choiceIcon={rock} />
             <Choice {...game} value="Paper" onClick={play} choiceIcon={paper} />
@@ -93,9 +93,9 @@ export default function App() {
             />
           </User>
           <Score score={game.userScore} />
-        </Box>
+        </ProfileBox>
         <Message {...game} />
-        <Box>
+        <ProfileBox>
           <Computer
             {...game}
             rockIcon={rock}
@@ -104,8 +104,8 @@ export default function App() {
             trophyIcon={trophy}
           />
           <Score score={game.pcScore} />
-        </Box>
-      </PlayBox>
+        </ProfileBox>
+      </PlayArea>
       <ResetButton {...game} onClick={reset} />
     </div>
   );
