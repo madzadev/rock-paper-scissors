@@ -1,7 +1,7 @@
 import { settings } from "../configs/game";
-import "./ResetButton.css";
+import "./Reset.css";
 
-export const ResetButton = ({ onClick, userSelection, userScore, pcScore }) => {
+export const Reset = ({ onClick, userSelection, userScore, pcScore }) => {
   return (
     userSelection !== "" && (
       <div onClick={onClick} className="reset-btn">

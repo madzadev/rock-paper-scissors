@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 import { Title } from "./components/Title";
 import { Round } from "./components/Round";
-import { PlayArea } from "./components/PlayArea";
-import { ProfileBox } from "./components/ProfileBox";
+import { Playground } from "./components/Playground";
+import { Profile } from "./components/Profile";
 import { User } from "./components/User";
 import { Choice } from "./components/Choice";
 import { Computer } from "./components/Computer";
 import { Score } from "./components/Score";
 import { Message } from "./components/Message";
-import { ResetButton } from "./components/ResetButton";
+import { Reset } from "./components/Reset";
 
 import { settings } from "./configs/game";
 
@@ -81,8 +81,8 @@ export default function App() {
     <div className="App">
       <Title />
       <Round {...game} />
-      <PlayArea>
-        <ProfileBox>
+      <Playground>
+        <Profile>
           <User {...game} trophyIcon={trophy}>
             <Choice {...game} value="Rock" onClick={play} choiceIcon={rock} />
             <Choice {...game} value="Paper" onClick={play} choiceIcon={paper} />
@@ -94,9 +94,9 @@ export default function App() {
             />
           </User>
           <Score score={userScore} />
-        </ProfileBox>
+        </Profile>
         <Message {...game} />
-        <ProfileBox>
+        <Profile>
           <Computer
             {...game}
             rockIcon={rock}
@@ -105,9 +105,9 @@ export default function App() {
             trophyIcon={trophy}
           />
           <Score score={pcScore} />
-        </ProfileBox>
-      </PlayArea>
-      <ResetButton {...game} onClick={reset} />
+        </Profile>
+      </Playground>
+      <Reset {...game} onClick={reset} />
     </div>
   );
 }
